@@ -25,7 +25,7 @@ source 'https://rubygems.org'
  group :development, :test do
    gem 'byebug'
    gem 'spring'
-   gem 'rspec-rails', '~> 3.0'
+   gem 'rspec-rails', '~> 3.5'
    gem 'shoulda'
    gem 'faker'
    gem 'factory_girl_rails'
