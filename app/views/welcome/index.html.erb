@@ -2,9 +2,6 @@
 <div class="jumbotron">
   <h1>Blocipedia</h2>
   <h2>Social, Markdown Wikis</h2>
-  <p>
-    <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %>
-  </p>
 </div>
 
 <div class="row">
@@ -12,9 +9,23 @@
   </div>
   <div class="col-md-5 accounts">
     <h2>Unlimited Public Wikis!</h2>
+    <ul>
+      <li>Anyone can view</li>
+      <li>Anyone can edit</li>
+    </ul>
+    <p>
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %>
+    </p>
   </div>
   <div class="col-md-5 accounts">
     <h2>Unlimited Private Wikis!</h2>
+    <ul>
+      <li>Control who views</li>
+      <li>Control who edits</li>
+    </ul>
+    <p>
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %>
+    </p>
   </div>
   <div class="col-md-1">
   </div>

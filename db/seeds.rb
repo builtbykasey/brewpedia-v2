@@ -2,6 +2,7 @@ require 'faker'
 
 10.times do
   User.create!(
+    name: Faker::Name.name,
     email: Faker::Internet.email,
     password: 'helloworld',
     confirmed_at: Time.now
@@ -20,6 +21,7 @@ end
 wikis = Wiki.all
 
 admin = User.create!(
+  name: 'Admin User',
   email: 'admin@example.com',
   password: 'password',
   confirmed_at: Time.now,
@@ -27,6 +29,7 @@ admin = User.create!(
 )
 
 premium = User.create!(
+  name: 'Premium User',
   email: 'premium@example.com',
   password: 'password',
   confirmed_at: Time.now,
@@ -34,6 +37,7 @@ premium = User.create!(
 )
 
 standard = User.create!(
+  name: 'Standard User',
   email: 'standard@example.com',
   password: 'password',
   confirmed_at: Time.now,
