@@ -46,7 +46,7 @@ RSpec.describe User, type: :model do
       end
     end
 
-    context "premium user" do
+    context "when premium user" do
       it "returns true for #premium?" do
         expect(user.premium?).to be_truthy
       end
@@ -60,7 +60,7 @@ RSpec.describe User, type: :model do
       end
     end
 
-    context "admin user" do
+    context "when admin user" do
       it "returns true for #admin?" do
         expect(user.admin?).to be_truthy
       end
