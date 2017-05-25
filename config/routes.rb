@@ -5,9 +5,13 @@ Rails.application.routes.draw do
 
   resources :charges, only: [:new, :create]
 
-  resources :users
+  resources :users, only: [] do
+    member do
+      post 'downgrade'
+    end
+  end
 
-  match "users/:id/downgrade" => "users#downgrade", :as => "downgrade_user", via: [:get, :post]
+  # match "users/:id/downgrade" => "users#downgrade", :as => "downgrade_user", via: [:get, :post]
 
   get 'about' => 'welcome#about'
 
