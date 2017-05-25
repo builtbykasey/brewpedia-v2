@@ -39,7 +39,7 @@ RSpec.describe WikisController, type: :controller do
         expect(response).to render_template :new
     end
 
-    it "instantiates @post" do
+    it "instantiates @wiki" do
       get :new, id: wiki.id
       expect(assigns(:wiki)).not_to be_nil
     end

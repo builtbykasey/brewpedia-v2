@@ -14,7 +14,8 @@ users = User.all
   wiki = Wiki.create!(
     user: users.sample,
     title: Faker::Superhero.name,
-    body: Faker::Superhero.power
+    body: Faker::Superhero.power,
+    private: false
   )
 end
 
