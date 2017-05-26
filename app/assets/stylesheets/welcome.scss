@@ -1,13 +1,49 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.nav {
-  background-color: lightblue;
+.navbar-nav li a{
+  color: black;
+  font-size: 20px;
+}
+
+#tab a:hover, #tab a:focus {
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+#logo {
+  border-radius: 0;
+  background-color: #015FA3;
+}
+
+#logo a {
+  color: #fff;
+}
+
+#logo a:hover {
+  background: #015FA3;
+  border: none;
 }
 
 div.jumbotron {
   text-align: center;
-  background: lightblue;
+  background: transparent;
+}
+
+.about {
+  background: #015FA3;
+  color: #fff;
+}
+
+.about-block {
+  text-align: center;
+}
+
+.about-block ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 24px;
 }
 
 .accounts {
