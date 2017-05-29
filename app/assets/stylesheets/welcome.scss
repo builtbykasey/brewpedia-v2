@@ -6,6 +6,10 @@
   font-size: 20px;
 }
 
+#tab {
+  padding-top: 16px;
+}
+
 #tab a:hover, #tab a:focus {
   background-color: transparent;
   border: none;
@@ -14,26 +18,36 @@
 
 #logo {
   border-radius: 0;
-  background-color: #015FA3;
+  background-color: #fff;
 }
 
 #logo a {
-  color: #fff;
+  color: #efa00b;
 }
 
 #logo a:hover {
-  background: #015FA3;
+  background: #fff;
   border: none;
 }
 
-div.jumbotron {
+.header {
   text-align: center;
   background: transparent;
+  padding: 50px 25px;
+}
+
+.header h1 {
+  color: #efa00b;
+  font-size: 80px;
 }
 
 .about {
-  background: #015FA3;
+  background: #0075c4;
   color: #fff;
+}
+
+.about h2 {
+  color: #efa00b;
 }
 
 .about-block {

@@ -30,7 +30,7 @@ source 'https://rubygems.org'
    gem 'spring'
    gem 'rspec-rails', '~> 3.5'
    gem 'shoulda'
-   gem 'faker'
+   gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
    gem 'factory_girl_rails'
    gem 'pry-rails'
  end

@@ -13,8 +13,8 @@ users = User.all
 100.times do
   wiki = Wiki.create!(
     user: users.sample,
-    title: Faker::Beer.name,
-    body: Faker::Beer.style,
+    title: Faker::Coffee.blend_name,
+    body: Faker::Coffee.notes,
     private: false
   )
 end
