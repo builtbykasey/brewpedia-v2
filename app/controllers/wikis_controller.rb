@@ -1,11 +1,13 @@
 class WikisController < ApplicationController
   def index
     @user = User.find_by(id: session[:user_id])
-    @wikis = Wiki.all
+    @wikis = Wiki.where("private=? OR private=?", false, nil)
+
   end
 
   def show
     @wiki = Wiki.find(params[:id])
+    @user = User.find_by(id: session[:user_id])
   end
 
   def new
@@ -17,6 +19,7 @@ class WikisController < ApplicationController
     @wiki.title = params[:wiki][:title]
     @wiki.body = params[:wiki][:body]
     @wiki.private = params[:wiki][:private]
+    @wiki.user = current_user
 
     if @wiki.save
       flash[:notice] = "Wiki was saved."
@@ -48,10 +51,11 @@ class WikisController < ApplicationController
 
   def destroy
     @wiki = Wiki.find(params[:id])
+    authorize @wiki
 
     if @wiki.destroy
       flash[:notice] = "\"#{@wiki.title}\" was deleted successfully."
-      redirect_to wiki_path
+      redirect_to wikis_path
     else
       flash.now[:alert] = "There was an error deleting the post."
       render :show

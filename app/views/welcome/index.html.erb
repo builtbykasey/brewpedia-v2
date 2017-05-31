@@ -1,9 +1,11 @@
 <div class="header">
-  <%= image_tag("coffee-logo3.png", size: "100x125") %>
-  <h1>Brewpedia</h2>
-  <h2>Everything about coffee</h2>
 
+  <h1><%= image_tag("coffee-logo2.png", size: "110x125") %> Brewpedia</h2>
+  <h2>Everything about coffee</h2>
+  <% unless user_signed_in? %>
     <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-success btn-lg' %>
+  <% end %>
+
 
 </div>
 
