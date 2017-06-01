@@ -2,12 +2,12 @@ class WikisController < ApplicationController
   def index
     @user = User.find_by(id: session[:user_id])
     @wikis = Wiki.where("private=? OR private=?", false, nil)
-
   end
 
   def show
     @wiki = Wiki.find(params[:id])
-    @user = User.find_by(id: session[:user_id])
+    @users = User.find_by(id: session[:user_id])
+    @collaborators = @wiki.collaborators
   end
 
   def new
@@ -15,11 +15,11 @@ class WikisController < ApplicationController
   end
 
   def create
-    @wiki = Wiki.new
-    @wiki.title = params[:wiki][:title]
-    @wiki.body = params[:wiki][:body]
-    @wiki.private = params[:wiki][:private]
-    @wiki.user = current_user
+    @wiki = current_user.wikis.build(wiki_params)
+    # @wiki.title = params[:wiki][:title]
+    # @wiki.body = params[:wiki][:body]
+    # @wiki.private = params[:wiki][:private]
+    # @wiki.user =
 
     if @wiki.save
       flash[:notice] = "Wiki was saved."
@@ -32,15 +32,19 @@ class WikisController < ApplicationController
 
   def edit
     @wiki = Wiki.find(params[:id])
+    @users = User.where.not(id: current_user.id)
+    @collaborators = @wiki.collaborators
   end
 
   def update
+    # raise params.inspect
     @wiki = Wiki.find(params[:id])
-    @wiki.title = params[:wiki][:title]
-    @wiki.body = params[:wiki][:body]
-    @wiki.private = params[:wiki][:private]
 
-    if @wiki.save
+    # @wiki.title = params[:wiki][:title]
+    # @wiki.body = params[:wiki][:body]
+    # @wiki.private = params[:wiki][:private]
+
+    if @wiki.update_attributes(wiki_params) #@wiki.save
       flash[:notice] = "Wiki was updated."
       redirect_to @wiki
     else
@@ -60,5 +64,11 @@ class WikisController < ApplicationController
       flash.now[:alert] = "There was an error deleting the post."
       render :show
     end
+  end
+
+  private
+
+  def wiki_params
+    params.require(:wiki).permit(:title, :body, :private)
   end
 end
