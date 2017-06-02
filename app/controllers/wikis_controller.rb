@@ -2,6 +2,7 @@ class WikisController < ApplicationController
   def index
     @user = User.find_by(id: session[:user_id])
     @wikis = Wiki.where("private=? OR private=?", false, nil)
+    
   end
 
   def show

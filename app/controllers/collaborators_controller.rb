@@ -1,17 +1,23 @@
 class CollaboratorsController < ApplicationController
   def create
     @wiki = Wiki.find(params[:wiki_id])
+    current_collaborators = @wiki.users
     @user = User.find_by_email(params[:collaborator][:user])
 
     if User.exists?(@user)
-      @collaborator = @wiki.collaborators.new(wiki_id: @wiki.id, user_id: @user.id)
-
-      if @collaborator.save
-        flash[:notice] = "Collaborator has been added!"
+      if current_collaborators.include?(@user) || @user == current_user
+        flash[:error] = "User is already a collaborator."
+        redirect_to @wiki
       else
-        flash[:error] = "Error adding collaborator, please try again."
+        @collaborator = @wiki.collaborators.new(wiki_id: @wiki.id, user_id: @user.id)
+
+        if @collaborator.save
+          flash[:notice] = "Collaborator has been added!"
+        else
+          flash[:error] = "Error adding collaborator, please try again."
+        end
+        redirect_to @wiki
       end
-      redirect_to @wiki
     else
       flash[:error] = "Sorry, no such user exists. "
       redirect_to @wiki

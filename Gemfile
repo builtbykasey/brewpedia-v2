@@ -24,13 +24,14 @@ source 'https://rubygems.org'
  gem 'pundit'
  gem 'stripe'
  gem 'redcarpet'
+ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+ gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
 
  group :development, :test do
    gem 'byebug'
    gem 'spring'
    gem 'rspec-rails', '~> 3.5'
    gem 'shoulda'
-   gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
    gem 'factory_girl_rails'
    gem 'pry-rails'
  end

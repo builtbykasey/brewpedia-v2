@@ -12,10 +12,50 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar-nav li a{
+  color: black;
+  font-size: 2rem;
+}
+
+#navbar {
+  margin: 0 3rem;
+}
+
+#tab, .navbar-header {
+  padding-top: 1.6rem;
+}
+
+#tab a:hover, #tab a:focus {
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+#upgrade-nav {
+  padding-top: 1.6rem;
+  padding-left: 1.5rem;
+}
+
+#logo {
+  border-radius: 0;
+  background: #fff;
+}
+
+#logo a {
+  color: #efa00b;
+}
+
+#logo a:hover {
+  background: #fff;
+  border: none;
+}
 
 .user-info {
   margin-top: .75rem;
@@ -35,6 +75,14 @@
   padding: 8px 0;
 }
 
-.notice {
-  margin-top: 80px;
+.navbar-toggle {
+  background: #0075c4;
+}
+
+.nav-menu {
+  color: #fff;
+}
+
+.navbar-collapse {
+  margin-bottom: 4rem;
 }
