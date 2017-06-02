@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .navbar-nav li a{
   color: black;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 #tab {
+  padding-top: 1.6rem;
 }
 
 #tab a:hover, #tab a:focus {
@@ -15,9 +16,14 @@
   text-decoration: none;
 }
 
+#upgrade-nav {
+  padding-top: 1.6rem;
+  padding-left: 1.5rem;
+}
+
 #logo {
   border-radius: 0;
-  background: #0075c4;
+  background: #fff;
 }
 
 #logo a {
@@ -25,46 +31,80 @@
 }
 
 #logo a:hover {
-  background: #0075c4;
+  background: #fff;
   border: none;
 }
 
 .header {
   text-align: center;
   background: transparent;
-  padding: 50px 25px;
+  padding-top: 1rem;
+  padding-bottom: 10rem;
 }
 
-.header h1 {
+#title {
   color: #efa00b;
-  font-size: 80px;
+  font-size: 8rem;
+  margin: 2rem 0;
 }
 
-.about {
+#subtitle {
+  padding-bottom: 3rem;
+  font-style: italic;
+  margin: 0;
+}
+
+#about {
   background: #0075c4;
   color: #fff;
 }
 
-.about h2 {
-  color: #efa00b;
+#about h2 {
+  color: #fff;
+  font-size: 3rem;
 }
 
 .about-block {
   text-align: center;
+  margin: 4rem 0;
 }
 
-.about-block ul {
-  list-style-type: none;
-  padding: 0;
-  font-size: 24px;
+.about-block h2 {
+  padding: 2rem 0;
+  font-size: 4rem;
+}
+
+.about-block img {
+  margin-bottom: 4rem;
 }
 
 .accounts {
   text-align: center;
+  margin: 7rem 0;
+}
+
+.accounts h2 {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+.accounts h3 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+.accounts h4 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #efa00b;
+  margin-bottom: 1rem;
 }
 
 .accounts ul {
   list-style-type: none;
   padding: 0;
-  font-size: 24px;
+  font-size: 2.5rem;
 }

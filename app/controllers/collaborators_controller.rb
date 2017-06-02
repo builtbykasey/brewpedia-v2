@@ -7,13 +7,13 @@ class CollaboratorsController < ApplicationController
       @collaborator = @wiki.collaborators.new(wiki_id: @wiki.id, user_id: @user.id)
 
       if @collaborator.save
-        flash[:notice] = "User added"
+        flash[:notice] = "Collaborator has been added!"
       else
-        flash[:error] = "Error"
+        flash[:error] = "Error adding collaborator, please try again."
       end
       redirect_to @wiki
     else
-      flash[:error] = "Error, no such user"
+      flash[:error] = "Sorry, no such user exists. "
       redirect_to @wiki
     end
   end
@@ -23,10 +23,10 @@ class CollaboratorsController < ApplicationController
     @collaborator = Collaborator.find(params[:id])
 
     if @collaborator.destroy
-      flash[:notice] = "Delete successfull"
+      flash[:notice] = "Collaborator has been successfully removed. "
       redirect_to @wiki
     else
-      flash.now[:alert] = "There was an error"
+      flash.now[:alert] = "There was an error removing this collaborator."
       redirect_to @wiki
     end
   end

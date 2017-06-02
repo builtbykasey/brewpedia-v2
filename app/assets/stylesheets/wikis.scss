@@ -1,3 +1,53 @@
 // Place all the styles related to the Wikis controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.heading {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.heading h1 {
+  font-size: 6rem;
+  color: #0075c4;
+}
+
+.new-wiki {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.owner p {
+  text-decoration: underline;
+  margin-bottom: 0;
+}
+
+.wiki-title {
+  background: rgba(239,160,11, .7);
+  padding: 3rem;
+  font-size: 2.5rem;
+}
+
+.wiki-title small {
+  font-size: 1.5rem;
+}
+
+.wiki-title a {
+  color: #0075c4;
+}
+
+.wiki-title a:hover {
+  color: #0075c4;
+  text-decoration: none;
+}
+
+.content {
+  border-top: 1px solid darkgray;
+}
+
+.content p {
+  font-size: 1.75rem;
+}
+
+// .collaborators {
+//   border-left: 1px solid darkgray;
+// }

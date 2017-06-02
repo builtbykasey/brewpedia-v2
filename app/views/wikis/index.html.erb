@@ -1,11 +1,21 @@
-<h1>Public Wikis</h1>
+<div class="row heading">
+  <div class="col-md-12">
+    <h1>Public Wikis</h1>
+  </div>
+</div>
+
+<div class="row new-wiki">
+  <div class="col-md-12">
+    <%= link_to "New Wiki", new_wiki_path, class: 'btn btn-success' %>
+  </div>
+</div>
 
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-12">
     <% @wikis.each do |wiki| %>
       <div class="media">
         <div class="media-body">
-          <h4 class="media-heading">
+          <h4 class="media-heading wiki-title">
             <%= link_to wiki.title, wiki %>
           </h4>
         </div>
@@ -13,7 +23,5 @@
     <% end %>
   </div>
 
-  <div class="col-md-4">
-    <%= link_to "New Wiki", new_wiki_path, class: 'btn btn-success' %>
-  </div>
+
 </div>

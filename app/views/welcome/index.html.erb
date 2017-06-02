@@ -1,7 +1,7 @@
 <div class="header">
-
-  <h1><%= image_tag("coffee-logo2.png", size: "110x125") %> Brewpedia</h2>
-  <h2>Everything about coffee</h2>
+  <%= image_tag("coffee-logo3.png", size: "150x175") %>
+  <h1 id="title">Brewpedia</h2>
+  <h2 id="subtitle">Everything about coffee</h2>
   <% unless user_signed_in? %>
     <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-success btn-lg' %>
   <% end %>
@@ -9,36 +9,26 @@
 
 </div>
 
-<div class="row about">
+<div class="row" id="about">
   <div class="col-md-4 about-block">
     <h2>Create</h2>
-    <ul>
-      <li>Unlimited Public Wikis!</li>
-      <li>Anyone can view</li>
-      <li>Anyone can edit</li>
-    </ul>
+    <%= image_tag("create.png", size: "140x125") %>
   </div>
   <div class="col-md-4 about-block">
     <h2>Markdown</h2>
-    <ul>
-      <li>Unlimited Private Wikis!</li>
-      <li>Control who views</li>
-      <li>Control who edits</li>
-    </ul>
+    <%= image_tag("markdown.png", size: "150x115") %>
   </div>
   <div class="col-md-4 about-block">
     <h2>Collaborate</h2>
-    <ul>
-      <li>Unlimited Private Wikis!</li>
-      <li>Control who views</li>
-      <li>Control who edits</li>
-    </ul>
+    <%= image_tag("collab.png", size: "125x115") %>
   </div>
 </div>
 
 <div class="row accounts">
+  <h2>Account Types</h2>
   <div class="col-md-6 accounts-block">
-    <h2>Free</h2>
+    <h3>Standard</h3>
+    <h4>Free</h4>
     <ul>
       <li>Unlimited Public Wikis!</li>
       <li>Anyone can view</li>
@@ -46,7 +36,8 @@
     </ul>
   </div>
   <div class="col-md-6 accounts-block">
-    <h2>Premium</h2>
+    <h3>Premium</h3>
+    <h4>$15/month</h4>
     <ul>
       <li>Unlimited Private Wikis!</li>
       <li>Control who views</li>
