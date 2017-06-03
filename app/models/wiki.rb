@@ -12,5 +12,8 @@ class Wiki < ActiveRecord::Base
 
   validates :title, length: { minimum: 1 }, presence: true
   validates :body, length: { minimum: 1 }, presence: true
-  # validates :user, presence: true
+
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
 end

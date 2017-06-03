@@ -26,6 +26,7 @@ source 'https://rubygems.org'
  gem 'redcarpet'
  gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
  gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
+ gem 'friendly_id', '~> 5.1.0'
 
  group :development, :test do
    gem 'byebug'

@@ -12,25 +12,39 @@
   background: transparent;
   padding-top: 1rem;
   padding-bottom: 10rem;
+  background: url('/assets/coffee-background.jpg');
+  background-position: center;
+  background-size: cover;
+  text-shadow: 0 3px 5px rgba(0,0,0,.4);
 }
 
 #title {
   color: #efa00b;
-  font-size: 8rem;
+  font-size: 10rem;
   margin: 2rem 0;
+  text-shadow: 0 3px 5px rgba(0,0,0,.4);
 }
 
 #subtitle {
-  padding-bottom: 3rem;
+  padding-bottom: 9rem;
   font-style: italic;
   margin: 0;
+  color: #fff;
+  text-shadow: 0 3px 5px rgba(0,0,0,.4);
+  font-size: 4rem;
+}
+
+#header-logo {
+  font-size: 12rem;
+  color: #d65108;
+  padding-top: 15rem;
 }
 
 #about {
   color: #fff;
   text-align: center;
   background: #0075c4;
-  padding: 3rem 0;
+  padding: 5rem 0;
   width: 100%;
 }
 
@@ -62,7 +76,7 @@
 #accounts {
   text-align: center;
   margin: 0;
-  background: url('/assets/coffee-background.jpg');
+  background: url('/assets/coffee-background5.jpg');
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -71,9 +85,9 @@
 #accounts h2 {
   font-size: 5rem;
   margin-bottom: 7rem;
-  margin-top: 10rem;
+  margin-top: 12rem;
   color: #fff;
-  text-shadow: 0 1px 2px rgba(0,0,0,.2);
+  text-shadow: 0 3px 5px rgba(0,0,0,.4);
 }
 
 .accounts-block {
@@ -82,7 +96,7 @@
   margin-right: auto;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .35);
   background: #fff;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
   padding-bottom: 3rem;
 }
 
@@ -127,6 +141,7 @@
 
 #dummy p {
   font-weight: bold;
+  color: #efa00b;
 }
 
 #footer {

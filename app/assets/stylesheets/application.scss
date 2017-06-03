@@ -25,11 +25,18 @@
 }
 
 #navbar {
-  margin: 0 3rem;
+  margin-right: 3rem;
+  margin-bottom: 0;
+}
+
+#navbar-logo {
+  margin-left: 3rem;
+  margin-bottom: 0;
+  padding-top: 0;
 }
 
 #tab, .navbar-header {
-  padding-top: 1.6rem;
+  padding-top: .5rem;
 }
 
 #tab a:hover, #tab a:focus {
@@ -46,10 +53,12 @@
 #logo {
   border-radius: 0;
   background: #fff;
+  color: #d65108;
+  font-size: 4rem;
 }
 
 #logo a {
-  color: #efa00b;
+  color: #d65108;
 }
 
 #logo a:hover {
@@ -58,7 +67,7 @@
 }
 
 .user-info {
-  margin-top: .75rem;
+  margin-top: 1.75rem;
   padding-right: 1rem;
   font-size: 1.5rem;
 }

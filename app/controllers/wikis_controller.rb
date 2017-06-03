@@ -2,11 +2,11 @@ class WikisController < ApplicationController
   def index
     @user = User.find_by(id: session[:user_id])
     @wikis = Wiki.where("private=? OR private=?", false, nil)
-    
+
   end
 
   def show
-    @wiki = Wiki.find(params[:id])
+    @wiki = Wiki.friendly.find(params[:id])
     @users = User.find_by(id: session[:user_id])
     @collaborators = @wiki.collaborators
   end
@@ -32,14 +32,14 @@ class WikisController < ApplicationController
   end
 
   def edit
-    @wiki = Wiki.find(params[:id])
+    @wiki = Wiki.friendly.find(params[:id])
     @users = User.where.not(id: current_user.id)
     @collaborators = @wiki.collaborators
   end
 
   def update
     # raise params.inspect
-    @wiki = Wiki.find(params[:id])
+    @wiki = Wiki.friendly.find(params[:id])
 
     # @wiki.title = params[:wiki][:title]
     # @wiki.body = params[:wiki][:body]
@@ -55,7 +55,7 @@ class WikisController < ApplicationController
   end
 
   def destroy
-    @wiki = Wiki.find(params[:id])
+    @wiki = Wiki.friendly.find(params[:id])
     authorize @wiki
 
     if @wiki.destroy

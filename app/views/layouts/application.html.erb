@@ -10,10 +10,10 @@
 <body>
   <div class="container" id="homepage">
 
-    <div class="navbar-header" id="navbar">
-      <a class="navbar-brand" href="#"><%= link_to root_path do %>
-            <%= image_tag("coffee-logo3.png", size: "40x50") %>
-          <% end %></a>
+    <div class="navbar-header" id="navbar-logo">
+      <%= link_to '<i class="fa fa-coffee" aria-hidden="true"></i>'.html_safe, root_path, id: "logo" %>
+
+      <!-- <a class="navbar-brand" href="#"><i class="fa fa-coffee" aria-hidden="true" id="logo"></i></a> -->
 
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -47,7 +47,11 @@
       </div>
     </div>
 
+    <div class="container">
+
     <%= flash_messages %>
+
+    </div>
 
     <%= yield %>
 
