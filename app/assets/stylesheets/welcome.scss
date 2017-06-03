@@ -7,15 +7,15 @@
   padding: 0;
 }
 
-.header {
+#header {
   text-align: center;
-  background: transparent;
   padding-top: 1rem;
   padding-bottom: 10rem;
   background: url('/assets/coffee-background.jpg');
   background-position: center;
   background-size: cover;
   text-shadow: 0 3px 5px rgba(0,0,0,.4);
+  width: 100%;
 }
 
 #title {

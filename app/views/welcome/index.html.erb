@@ -1,11 +1,15 @@
 
-<div class="header">
-  <i class="fa fa-coffee" aria-hidden="true" id="header-logo"></i>
-  <h1 id="title">Brewpedia</h2>
-  <h2 id="subtitle">Everything about coffee</h2>
-  <% unless user_signed_in? %>
-    <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-success btn-lg' %>
-  <% end %>
+<div class="container" id="header">
+  <div class="row">
+    <div class="col-sm-12">
+      <i class="fa fa-coffee" aria-hidden="true" id="header-logo"></i>
+      <h1 id="title">Brewpedia</h2>
+      <h2 id="subtitle">Everything about coffee</h2>
+      <% unless user_signed_in? %>
+        <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-success btn-lg' %>
+      <% end %>
+    </div>
+  </div>
 
 
 </div>
