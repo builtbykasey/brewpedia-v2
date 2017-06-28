@@ -1,8 +1,8 @@
 # Brewpedia
 
-### SaaS Wiki Collaboration Tool
+### SaaS Wiki Collaboration Tool for All Things Coffee
 
-Users can create, edit and collaborate on markdown wikis.
+Coffee lovers can create, edit and collaborate on markdown wikis relating to all things coffee.
 
 See a demo version here: https://blocipedia-kasey.herokuapp.com
 
@@ -19,29 +19,28 @@ See a demo version here: https://blocipedia-kasey.herokuapp.com
 - Users can add and remove collaborators for private wikis
 - Users have readable URLs on wikis
 
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
+**Languages and Frameworks:**
+- Ruby 2.3.3
+- Rails 4.2.5
+- Bootstrap
 
+**Databases:**
+- SQLite (Test, Development)
+- PostgreSQL (Production)
+
+**Tools and Gems:**
+- SendGrid for email confirmation
+- Devise for user authentication
+- Pundit for user authorization
+- Stripe for payment processing
+- Figaro for secure configuration
+- Redcarpet for Markdown formatting
+- Faker for seeding fake data
+- FriendlyId 5.1.0 for human friendly URLs
+
+## Setup and Configuration
 
 ## License
 
