@@ -46,16 +46,17 @@ This app was created as part of the Bloc Full Stack Web Development apprenticesh
 
 #### Setup:
 
-Environment variables were set using Figaro and are stored in config/application.yml (ignored by git).
+- Environment variables were set using Figaro and are stored in config/application.yml (ignored by git).
 
-The config/application.example.yml file illustrates how environment variables should be stored.
+- The config/application.example.yml file illustrates how environment variables should be stored.
 
 #### To run Blocipedia locally:
 
 1. Clone the repository
-2. Create and migrate the SQLite database with rake db:create and rake db:migrate
-3. Start the server using rails server
-4. Run the app on localhost:3000
+2. Run `bundle install`
+3. Create and migrate the SQLite database with rake db:create and rake db:migrate
+4. Start the server using `rails server`
+5. Run the app on `localhost:3000`
 
 ## License
 
