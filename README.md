@@ -6,7 +6,7 @@ Coffee lovers can create, edit and collaborate on markdown wikis relating to all
 
 See a demo version here: https://blocipedia-kasey.herokuapp.com
 
-This app was created as part of the Bloc Full Stack Web Development apprenticeship program.
+This app was created as part of the [Bloc Full Stack Web Development apprenticeship program](https://www.bloc.io/web-developer-career-track).
 
 ## Project Objectives
 
@@ -54,7 +54,7 @@ This app was created as part of the Bloc Full Stack Web Development apprenticesh
 
 1. Clone the repository
 2. Run `bundle install`
-3. Create and migrate the SQLite database with rake db:create and rake db:migrate
+3. Create and migrate the database with `rake db:create` and `rake db:migrate`cd
 4. Start the server using `rails server`
 5. Run the app on `localhost:3000`
 
