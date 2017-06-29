@@ -4,9 +4,7 @@
 
 Coffee lovers can create, edit and collaborate on markdown wikis relating to all things coffee.
 
-See a demo version here: https://blocipedia-kasey.herokuapp.com
-
-This app was created as part of the [Bloc Full Stack Web Development apprenticeship program](https://www.bloc.io/web-developer-career-track).
+[Demo Site](https://blocipedia-kasey.herokuapp.com)
 
 ## Project Objectives
 
@@ -57,7 +55,3 @@ This app was created as part of the [Bloc Full Stack Web Development apprentices
 3. Create and migrate the database with `rake db:create` and `rake db:migrate`cd
 4. Start the server using `rails server`
 5. Run the app on `localhost:3000`
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
