@@ -13,8 +13,6 @@
     <div class="navbar-header" id="navbar-logo">
       <%= link_to '<i class="fa fa-coffee" aria-hidden="true"></i>'.html_safe, root_path, id: "logo" %>
 
-      <!-- <a class="navbar-brand" href="#"><i class="fa fa-coffee" aria-hidden="true" id="logo"></i></a> -->
-
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="nav-menu">Menu</span>
@@ -23,10 +21,6 @@
     </div>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav">
-        <!-- <li id="logo"><%= link_to root_path do %>
-              <%= image_tag("coffee-logo3.png", size: "40x50") %>
-            <% end %>
-        </li> -->
         <li id="tab"><%= link_to "#Explore", about_path %></li>
         <% if user_signed_in? %>
           <li id="tab"><%= link_to "Public Wikis", wikis_path %></li>
