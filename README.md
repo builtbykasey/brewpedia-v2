@@ -4,7 +4,9 @@
 
 Coffee lovers can create, edit and collaborate on markdown wikis relating to all things coffee.
 
-[Demo Site](https://blocipedia-kasey.herokuapp.com)
+### [Demo Site](https://blocipedia-kasey.herokuapp.com)
+
+### [Case Study](https://medium.com/@kaseycolleen/brewpedia-case-study-eb4b7f0fc165)
 
 ## Project Objectives
 
