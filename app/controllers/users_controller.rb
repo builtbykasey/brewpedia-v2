@@ -1,17 +1,18 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User.find_by(id: session[:user_id])
+    @user = User.find(params[:id])
+    # puts "show @user: #{@user.inspect}"
     @wikis = policy_scope(Wiki)
-    @wiki = Wiki.friendly.find(params[:id])
+    # @wiki = Wiki.friendly.find(params[:id])
   end
 
   def downgrade
-    @user = User.find_by(id: session[:user_id])
+    @user = User.find(params[:id])
     @wikis = current_user.wikis
-
+    puts "@user: #{@user.inspect} ---- current_user: #{current_user.inspect}"
     if @user == current_user
-      @wikis.unscoped.update_all(private: 'false')
+      @wikis.update_all(private: false)
       current_user.update_attribute(:role, 'standard')
 
       flash[:notice] = "#{current_user.email} you're account has been downgraded"

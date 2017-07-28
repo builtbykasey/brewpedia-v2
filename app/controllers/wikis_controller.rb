@@ -1,12 +1,13 @@
 class WikisController < ApplicationController
   def index
-    @user = User.find_by(id: session[:user_id])
+    # @user = User.find(session[:user_id])
+    @user = current_user
     @wikis = Wiki.where("private=? OR private=?", false, nil)
   end
 
   def show
     @wiki = Wiki.friendly.find(params[:id])
-    @users = User.find_by(id: session[:user_id])
+    @users = User.find_by(id: params[:id])
     @collaborators = @wiki.collaborators
   end
 

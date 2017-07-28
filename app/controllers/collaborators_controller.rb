@@ -2,7 +2,7 @@ class CollaboratorsController < ApplicationController
   def create
     @wiki = Wiki.friendly.find(params[:wiki_id])
     current_collaborators = @wiki.users
-    @user = User.find_by_email(params[:collaborator][:user])
+    @user = User.find_by(email: params[:collaborator][:user])
 
     if User.exists?(@user)
       if current_collaborators.include?(@user) || @user == current_user

@@ -7,7 +7,7 @@ class Wiki < ActiveRecord::Base
 
   scope :visible_to, -> (user) do
     return all if user.premium? || user.admin?
-    where(private: [false, nill])
+    where(private: [false, nil])
   end
 
   validates :title, length: { minimum: 1 }, presence: true

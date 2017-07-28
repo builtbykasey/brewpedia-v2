@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   resources :charges, only: [:new, :create]
 
-  resources :users, only: [] do
+  resources :users, only: [:show] do
     member do
-      get 'show'
+      # get 'show'
       post 'downgrade'
     end
   end
