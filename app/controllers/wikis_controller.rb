@@ -1,6 +1,5 @@
 class WikisController < ApplicationController
   def index
-    # @user = User.find(session[:user_id])
     @user = current_user
     @wikis = Wiki.where("private=? OR private=?", false, nil)
   end

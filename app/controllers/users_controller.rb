@@ -2,9 +2,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    # puts "show @user: #{@user.inspect}"
     @wikis = policy_scope(Wiki)
-    # @wiki = Wiki.friendly.find(params[:id])
   end
 
   def downgrade
@@ -19,5 +17,4 @@ class UsersController < ApplicationController
       redirect_to edit_user_registration_path
     end
   end
-
 end
