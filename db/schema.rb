@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170602230401) do
+ActiveRecord::Schema.define(version: 20181212133929) do
 
   create_table "collaborators", force: :cascade do |t|
     t.integer  "wiki_id"
@@ -59,13 +59,17 @@ ActiveRecord::Schema.define(version: 20170602230401) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "wikis", force: :cascade do |t|
-    t.string   "title"
-    t.text     "body"
-    t.boolean  "private",    default: false
+    t.string   "blend_name"
+    t.text     "notes"
+    t.boolean  "private",     default: false
     t.integer  "user_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "slug"
+    t.string   "origin"
+    t.string   "variety"
+    t.string   "intensifier"
+    t.string   "description"
   end
 
   add_index "wikis", ["slug"], name: "index_wikis_on_slug", unique: true
