@@ -21,11 +21,11 @@
   <div class="row content">
     <div class="col-md-8 body">
       <%= form_for @wiki do |f| %>
-        <%= f.label :title %>
-        <%= f.text_field :title, class: 'form-control', placeholder: "Enter wiki title" %>
+        <%= f.label :blend_name %>
+        <%= f.text_field :blend_name, class: 'form-control', placeholder: "Enter wiki title" %>
 
-        <%= f.label :body %>
-        <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter wiki body" %>
+        <%= f.label :notes %>
+        <%= f.text_area :notes, rows: 8, class: 'form-control', placeholder: "Enter wiki body" %>
 
         <% if current_user.admin? || (current_user.premium? && current_user.id == @wiki.user_id) %>
           <%= f.label :private, class: 'checkbox' do %>
@@ -46,11 +46,11 @@
   <div class="row content">
     <div class="col-md-12 body">
       <%= form_for @wiki do |f| %>
-        <%= f.label :title %>
-        <%= f.text_field :title, class: 'form-control', placeholder: "Enter wiki title" %>
+        <%= f.label :blend_name %>
+        <%= f.text_field :blend_name, class: 'form-control', placeholder: "Enter wiki title" %>
 
-        <%= f.label :body %>
-        <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter wiki body" %>
+        <%= f.label :notes %>
+        <%= f.text_area :notes, rows: 8, class: 'form-control', placeholder: "Enter wiki body" %>
 
         <% if current_user.admin? || (current_user.premium? && current_user.id == @wiki.user_id) %>
           <%= f.label :private, class: 'checkbox' do %>

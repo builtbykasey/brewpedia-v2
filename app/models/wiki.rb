@@ -10,10 +10,10 @@ class Wiki < ActiveRecord::Base
     where(private: [false, nil])
   end
 
-  validates :title, length: { minimum: 1 }, presence: true
-  validates :body, length: { minimum: 1 }, presence: true
+  validates :blend_name, length: { minimum: 1 }, presence: true
+  validates :notes, length: { minimum: 1 }, presence: true
 
   extend FriendlyId
-  friendly_id :title, use: :slugged
+  friendly_id :blend_name, use: :slugged
 
 end

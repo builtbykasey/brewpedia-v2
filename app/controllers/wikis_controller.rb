@@ -49,7 +49,7 @@ class WikisController < ApplicationController
     authorize @wiki
 
     if @wiki.destroy
-      flash[:notice] = "\"#{@wiki.title}\" was deleted successfully."
+      flash[:notice] = "\"#{@wiki.blend_name}\" was deleted successfully."
       redirect_to wikis_path
     else
       flash.now[:alert] = "There was an error deleting the post."
@@ -60,6 +60,6 @@ class WikisController < ApplicationController
   private
 
   def wiki_params
-    params.require(:wiki).permit(:title, :body, :private)
+    params.require(:wiki).permit(:blend_name, :notes, :private)
   end
 end

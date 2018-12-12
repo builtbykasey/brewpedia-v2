@@ -13,8 +13,12 @@ users = User.all
 100.times do
   wiki = Wiki.create!(
     user: users.sample,
-    title: Faker::Coffee.blend_name,
-    body: Faker::Coffee.notes,
+    blend_name: Faker::Coffee.blend_name,
+    origin: Faker::Coffee.origin,
+    variety: Faker::Coffee.variety,
+    description: Faker::Coffee.notes,
+    intensifier: Faker::Coffee.intensifier,
+    notes: 'Strong emphasis, aka bold, with **asterisks** or __underscores__.',
     private: false
   )
 end

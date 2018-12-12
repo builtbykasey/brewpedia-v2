@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :wiki do
-    title "MyString"
-    body "MyText"
+    blend_name "MyString"
+    notes "MyText"
     private false
     user nil
   end

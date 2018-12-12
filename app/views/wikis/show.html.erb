@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row heading">
     <div class="col-md-12">
-      <h1><%= @wiki.title %></h1>
+      <h1><%= @wiki.blend_name %></h1>
       <small>
         submitted <%= time_ago_in_words(@wiki.created_at) %> ago by <%= @wiki.user.name %>
       </small>
@@ -17,18 +17,26 @@
   </div>
 
   <% if @wiki.private? %>
-  <div class="row content">
-    <div class="col-md-8 body">
-      <p><%= markdown(@wiki.body) %></p>
+    <div class="row content">
+      <div class="col-md-8 body">
+        <p><%= markdown(@wiki.origin) %></p>
+        <p><%= markdown(@wiki.variety) %></p>
+        <p><%= markdown(@wiki.description) %></p>
+        <p><%= markdown(@wiki.intensifier) %></p>
+        <p><%= markdown(@wiki.notes) %></p>
+      </div>
+      <div class="col-md-4 collaborators">
+        <%= render partial: 'collaborators/list' %>
+      </div>
     </div>
-    <div class="col-md-4 collaborators">
-      <%= render partial: 'collaborators/list' %>
-    </div>
-  </div>
   <% else %>
     <div class="row content">
       <div class="col-md-12 body">
-        <p><%= markdown(@wiki.body) %></p>
+        <p><%= markdown(@wiki.origin) %></p>
+        <p><%= markdown(@wiki.variety) %></p>
+        <p><%= markdown(@wiki.description) %></p>
+        <p><%= markdown(@wiki.intensifier) %></p>
+        <p><%= markdown(@wiki.notes) %></p>
       </div>
     </div>
   <% end %>

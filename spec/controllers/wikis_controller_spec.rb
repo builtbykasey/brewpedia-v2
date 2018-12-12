@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe WikisController, type: :controller do
   let(:user) { User.create!(email: "user@example.com", password: "password", confirmed_at: Date.today) }
-  let(:wiki) { Wiki.create!(title: "New Wiki Title", body: "New Wiki Body", user: user) }
+  let(:wiki) { Wiki.create!(blend_name: "New Wiki Title", notes: "New Wiki notes", user: user) }
 
   before do
       sign_in(user)
@@ -51,12 +51,12 @@ RSpec.describe WikisController, type: :controller do
     end
 
     it "assigns the new wiki to @wiki" do
-      post :create, id: wiki.id, wiki: {title: "New Wiki Title", body: "New Wiki Body"}
+      post :create, id: wiki.id, wiki: {blend_name: "New Wiki Title", notes: "New Wiki notes"}
       expect(assigns(:wiki)).to eq Wiki.last
     end
 
     it "redirects to the new post" do
-      post :create, id: wiki.id, wiki: {title: "New Wiki Title", body: "New Wiki Body"}
+      post :create, id: wiki.id, wiki: {blend_name: "New Wiki Title", notes: "New Wiki notes"}
       expect(response).to redirect_to [Wiki.last]
     end
   end
@@ -77,29 +77,29 @@ RSpec.describe WikisController, type: :controller do
       post_instance = assigns(:wiki)
 
       expect(post_instance.id).to eq wiki.id
-      expect(post_instance.title).to eq wiki.title
-      expect(post_instance.body).to eq wiki.body
+      expect(post_instance.blend_name).to eq wiki.blend_name
+      expect(post_instance.notes).to eq wiki.notes
     end
   end
 
   describe "PUT update" do
     it "updates wiki with expected attributes" do
-      new_title = "New Wiki Title"
-      new_body = "New Wiki Body"
+      new_blend_name = "New Wiki Title"
+      new_notes = "New Wiki notes"
 
-      put :update, id: wiki.id, wiki: {title: new_title, body: new_body}
+      put :update, id: wiki.id, wiki: {blend_name: new_blend_name, notes: new_notes}
 
       updated_wiki = assigns(:wiki)
       expect(updated_wiki.id).to eq wiki.id
-      expect(updated_wiki.title).to eq new_title
-      expect(updated_wiki.body).to eq new_body
+      expect(updated_wiki.blend_name).to eq new_blend_name
+      expect(updated_wiki.notes).to eq new_notes
     end
 
     it "redirects to the updated wiki" do
-      new_title = "New Wiki Title"
-      new_body = "New Wiki Body"
+      new_blend_name = "New Wiki Title"
+      new_notes = "New Wiki notes"
 
-      put :update, id: wiki.id, wiki: {title: new_title, body: new_body}
+      put :update, id: wiki.id, wiki: {blend_name: new_blend_name, notes: new_notes}
 
       expect(response).to redirect_to [wiki]
     end
