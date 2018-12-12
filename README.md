@@ -1,4 +1,6 @@
-# Brewpedia
+# Brewpedia v2
+
+Update to original project
 
 ### SaaS Wiki Collaboration Tool for All Things Coffee
 

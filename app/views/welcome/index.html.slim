@@ -1,0 +1,57 @@
+
+#header.container
+  .row
+    .col-sm-12
+      i.fa.fa-coffee aria-hidden="true" id="header-logo"
+      h1#title Brewpedia
+      h2.subtitle Everything about coffee
+      - unless user_signed_in?
+        = link_to "Sign Up", new_user_registration_path, class: 'btn btn-success btn-lg'
+
+#about.container
+
+  .row
+    #about-text.col-md-4
+      i.fa.fa-plus#icon aria-hidden="true"
+      h2 Create
+      p Create text based wikis and share your knowledge about coffee brewing with the world.
+    #about-text.col-md-4
+      i.fa.fa-arrow-circle-o-down#icon aria-hidden="true"
+      h2 Markdown
+      p Express your thoughts and add emotion to your words with Mardown syntax.
+    #about-text.col-md-4
+      i.fa.fa-share-alt#icon aria-hidden="true"
+      h2 Collaborate</h2>
+      p Collaborate with any of the other 150,000 Brewpedia community members.
+
+#accounts.row
+  h2 Account Features
+
+  .col-md-6
+    .accounts-block
+      h3 Standard
+      h4 Free
+      ul
+        li Unlimited Wikis
+        li Create Public Wikis
+        li Edit Public Wikis
+        li Be A Collaborator
+      = link_to "Sign Up", new_user_registration_path, class: 'btn btn-success btn-lg'
+
+  .col-md-6
+    .accounts-block
+      h3 Premium
+      h4 
+        | $15
+        span.per-month 
+          | /
+          | month
+      ul
+        li Create Private Wikis
+        li Add Collaborators
+        li Remove Collaborators
+        li Plus All Standard Features
+      = link_to "Sign Up", new_user_registration_path, class: 'btn btn-success btn-lg'
+
+#footer
+  p © 2017. Brewpedia - All Rights Reserved.
