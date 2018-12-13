@@ -1,0 +1,23 @@
+= form_for @wiki do |f| 
+  = f.label :blend_name 
+  = f.text_field :blend_name, class: 'form-control', placeholder: "Enter blend name"
+
+  = f.label :origin
+  = f.text_field :origin, class: 'form-control', placeholder: "Enter origin"
+
+  = f.label :variety
+  = f.text_field :variety, class: 'form-control', placeholder: "Enter variety"
+
+  = f.label :intensifier
+  = f.text_field :intensifier, class: 'form-control', placeholder: "Enter intensifier"
+
+  = f.label :notes
+  = f.text_area :notes, rows: 8, class: 'form-control', placeholder: "Enter notes"
+
+  - if current_user.admin? || current_user.premium?
+    = f.label :private, class: 'checkbox'
+      = f.check_box :private
+      | Private Wiki
+
+  = f.submit "Save", class: 'btn btn-success'
+end
